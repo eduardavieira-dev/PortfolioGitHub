@@ -1,14 +1,33 @@
+import { About } from "./components/About";
+import { Header } from "./components/Header";
+import { InteressPill } from "./components/InteressPill";
+import { TechPill } from "./components/TechPill";
+
 export default function App() {
   return (
     <>
       <div className="w-full flex flex-col p-5 max-w-6xl mx-auto">
         <img src="octocat.png" alt="" className="w-40 h-40 mx-auto" />
-        <h1 className="text-primary text-center text-2xl font-semibold">Olá, mundo!</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptatibus eos tenetur
-          odit, veritatis commodi incidunt fuga dicta, voluptas illo vel? Corrupti debitis qui
-          excepturi nam, in recusandae quia placeat.
-        </p>
+
+        <Header />
+        <About />
+
+
+        <h3 className="font-medium text-xl">Interesses</h3>
+        <div className="flex flex-wrap gap-1 my-2 mb-4">
+          <InteressPill text="Interesse 1" />
+          <InteressPill text="Interesse 2" />
+          <InteressPill text="Interesse 3" />
+        </div>
+
+
+        <h3 className="font-medium text-xl">Tecnologias</h3>
+        <div className="flex flex-wrap gap-1 my-2 mb-4">
+          <TechPill text="Tecnologia 1" />
+          <TechPill text="Tecnologia 2" />
+          <TechPill text="Tecnologia 3" />
+        </div>
+
       </div>
     </>
   )

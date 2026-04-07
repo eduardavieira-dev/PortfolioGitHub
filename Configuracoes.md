@@ -46,12 +46,12 @@ body {
 	color: var(--secondary);
 }
 
-.bg-primary-soft {
-	background-color: var(--bg-primary);
+.bg-primary {
+  background-color: var(--bg-primary);
 }
 
-.bg-secondary-soft {
-	background-color: var(--bg-secondary);
+.bg-secondary {
+  background-color: var(--bg-secondary);
 }
 
 .bg-card {

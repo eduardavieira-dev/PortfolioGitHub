@@ -38,11 +38,11 @@ body {
   color: var(--secondary);
 }
 
-.bg-primary-soft {
+.bg-primary {
   background-color: var(--bg-primary);
 }
 
-.bg-secondary-soft {
+.bg-secondary {
   background-color: var(--bg-secondary);
 }
 
