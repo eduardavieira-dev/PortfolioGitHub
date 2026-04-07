@@ -10,40 +10,40 @@ Adicione este bloco no início do projeto (por exemplo, no seu arquivo global de
 @import 'tailwindcss';
 
 :root {
-	--background: #ffffff;
-	--text: #000000;
-	--primary: #e60076;
-	--bg-primary: #fce7f3;
-	--secondary: #6a7282;
-	--bg-secondary: #f3f4f6;
-	--border: #e7e7e7;
-	--bg-card: #fcfcfc;
-	--font-sans: 'Figtree', sans-serif;
+  --background: #ffffff;
+  --text: #000000;
+  --primary: #e60076;
+  --bg-primary: #fce7f3;
+  --secondary: #6a7282;
+  --bg-secondary: #f3f4f6;
+  --border-card: #e7e7e7;
+  --bg-card: #fcfcfc;
+  --font-sans: 'Figtree', sans-serif;
 }
 
 html,
 body,
 #root {
-	min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-	margin: 0;
-	background: var(--background);
-	color: var(--text);
-	font-family: var(--font-sans);
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
 }
 
 .font-figtree {
-	font-family: var(--font-sans);
+  font-family: var(--font-sans);
 }
 
 .text-primary {
-	color: var(--primary);
+  color: var(--primary);
 }
 
 .text-secondary {
-	color: var(--secondary);
+  color: var(--secondary);
 }
 
 .bg-primary {
@@ -55,10 +55,10 @@ body {
 }
 
 .bg-card {
-	background-color: var(--bg-card);
+  background-color: var(--bg-card);
 }
 
-.border {
-	border-color: var(--border);
+.border-card {
+  border-color: var(--border-card);
 }
 ```

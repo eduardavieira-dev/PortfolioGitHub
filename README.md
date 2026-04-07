@@ -54,9 +54,22 @@ public/          # Assets estáticos (imagens, favicon, etc)
 npm install
 ```
 
+Se for usar os icones do projeto com Phosphor, instale tambem:
+
+```bash
+npm install @phosphor-icons/react
+```
+
 ### Ambiente de desenvolvimento
 ```bash
 npm run dev
+```
+
+Se ocorrer o erro `504 (Outdated Optimize Dep)` no Vite, limpe o cache e inicie com `--force`:
+
+```bash
+rm -rf node_modules/.vite
+npm run dev -- --force
 ```
 
 ### Build de produção

@@ -65,7 +65,52 @@ import './index.css';
 npm run dev
 ```
 
-## 5. Extensão recomendada para VS Code
+## 5. Instalando os icones (Phosphor)
+
+Se o projeto usar icones com Phosphor, instale esta dependencia:
+
+```bash
+npm install @phosphor-icons/react
+```
+
+Exemplo de uso:
+
+```tsx
+import { GithubLogo } from '@phosphor-icons/react'
+
+<GithubLogo size={20} />
+```
+
+## 6. Erro comum no Vite: 504 Outdated Optimize Dep
+
+Se aparecer algo como `Failed to load resource: 504 (Outdated Optimize Dep)`, siga estes passos:
+
+1. Pare o servidor (`Ctrl + C`).
+2. Limpe o cache de otimização do Vite.
+3. Rode o projeto novamente com `--force`.
+
+macOS/Linux:
+
+```bash
+rm -rf node_modules/.vite
+npm run dev -- --force
+```
+
+Windows (Prompt de Comando):
+
+```bat
+rmdir /s /q node_modules\.vite
+npm run dev -- --force
+```
+
+Windows (PowerShell):
+
+```powershell
+Remove-Item -Recurse -Force node_modules/.vite
+npm run dev -- --force
+```
+
+## 7. Extensão recomendada para VS Code
 
 - **Tailwind CSS IntelliSense**
   - ID: `bradlc.vscode-tailwindcss`
