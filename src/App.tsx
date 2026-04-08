@@ -42,9 +42,9 @@ export default function App() {
         </div>
 
         <section className="mx-auto mt-10 mb-5">
-          <div className="max-w-lg">
+          <div className="max-w-md">
             <h2 className="text-center text-xl font-medium mb-3">Explorar</h2>
-            <p className="text-secondary text-center">
+            <p className="text-secondary text-sm text-center">
               Busque por usuários do GitHub para ver seus repositorios, informacões do perfil e
               contribuições
             </p>
@@ -68,7 +68,7 @@ export default function App() {
         </form>
 
         <section id="cards" className="grid md:grid-cols-3 gap-4 mt-10">
-          <div className="border border-card rounded-md p-4 flex flex-col h-full">
+          <div className="border border-card rounded-lg p-4 flex flex-col h-full">
             <div className="flex items-center justify-between w-full  mb-3">
               <h3 className="font-medium text-md">Repositório Exemplo</h3>
               <a href="#" className="text-primary">
@@ -101,7 +101,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="border border-card rounded-md p-4 flex flex-col h-full">
+          <div className="border border-card rounded-lg p-4 flex flex-col h-full">
             <div className="flex items-center justify-between w-full  mb-3">
               <h3 className="font-medium text-md">Repositório Exemplo</h3>
               <a href="#" className="text-primary">
@@ -115,7 +115,7 @@ export default function App() {
             </p>
           
             <div className="flex-1"></div>
-            
+
             <div className="text-secondary text-sm flex items-center gap-4 mt-2">
               <div className="flex items-center gap-1">
                 <Star size={12} className="text-secondary" />
