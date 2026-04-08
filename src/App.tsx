@@ -4,7 +4,7 @@ import { Header } from './components/Header'
 import { InteressPill } from './components/InteressPill'
 import { ProfileSection } from './components/ProfileSection'
 import { TechPill } from './components/TechPill'
-import { GitFork, MagnifyingGlass, Star } from '@phosphor-icons/react'
+import { GitFork, MagnifyingGlass, Star, ArrowSquareOut } from '@phosphor-icons/react'
 
 export default function App() {
   return (
@@ -68,9 +68,13 @@ export default function App() {
         </form>
 
         <section id="cards" className="grid md:grid-cols-3 gap-4 mt-10">
-          
-          <div className="border border-card rounded-md p-4">
-            <h3 className="font-medium text-md mb-3">Repositório Exemplo</h3>
+          <div className="border border-card rounded-md p-4 flex flex-col h-full">
+            <div className="flex items-center justify-between w-full  mb-3">
+              <h3 className="font-medium text-md">Repositório Exemplo</h3>
+              <a href="#" className="text-primary">
+                <ArrowSquareOut size={17} />
+              </a>
+            </div>
             <p className=" text-xs mb-3 line-clamp-2">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias tempore ipsa
               impedit, eos voluptate doloribus sed. Alias, deleniti fugit repellat nostrum at
@@ -84,6 +88,7 @@ export default function App() {
                 React
               </span>
             </div>
+            <div className="flex-1"></div>
             <div className="text-secondary text-sm flex items-center gap-4 mt-2">
               <div className="flex items-center gap-1">
                 <Star size={12} className="text-secondary" />
@@ -96,7 +101,33 @@ export default function App() {
               </div>
             </div>
           </div>
+          <div className="border border-card rounded-md p-4 flex flex-col h-full">
+            <div className="flex items-center justify-between w-full  mb-3">
+              <h3 className="font-medium text-md">Repositório Exemplo</h3>
+              <a href="#" className="text-primary">
+                <ArrowSquareOut size={17} />
+              </a>
+            </div>
+            <p className=" text-xs mb-3 line-clamp-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias tempore ipsa
+              impedit, eos voluptate doloribus sed. Alias, deleniti fugit repellat nostrum at
+              aspernatur blanditiis. Beatae sunt nemo facilis tempore laboriosam!
+            </p>
+          
+            <div className="flex-1"></div>
+            
+            <div className="text-secondary text-sm flex items-center gap-4 mt-2">
+              <div className="flex items-center gap-1">
+                <Star size={12} className="text-secondary" />
+                <span className="text-xs">1</span>
+              </div>
 
+              <div className="flex items-center gap-1">
+                <GitFork size={12} className="text-secondary" />
+                <span className="text-xs">0</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <Footer />
