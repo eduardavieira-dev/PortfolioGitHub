@@ -81,7 +81,15 @@ import { GithubLogo } from '@phosphor-icons/react'
 <GithubLogo size={20} />
 ```
 
-## 6. Erro comum no Vite: 504 Outdated Optimize Dep
+## 6. Instalando o grafico de contribuicoes do GitHub
+
+Para exibir o calendario de contribuicoes no perfil:
+
+```bash
+npm install react-github-calendar
+```
+
+## 7. Erro comum no Vite: 504 Outdated Optimize Dep
 
 Se aparecer algo como `Failed to load resource: 504 (Outdated Optimize Dep)`, siga estes passos:
 
@@ -110,7 +118,7 @@ Remove-Item -Recurse -Force node_modules/.vite
 npm run dev -- --force
 ```
 
-## 7. Extensão recomendada para VS Code
+## 8. Extensão recomendada para VS Code
 
 - **Tailwind CSS IntelliSense**
   - ID: `bradlc.vscode-tailwindcss`
