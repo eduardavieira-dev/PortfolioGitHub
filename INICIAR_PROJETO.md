@@ -81,7 +81,77 @@ import { GithubLogo } from '@phosphor-icons/react'
 <GithubLogo size={20} />
 ```
 
-## 6. Instalando o grafico de contribuicoes do GitHub
+## 6. Instalando e configurando o Axios
+
+Axios é uma biblioteca para fazer requisições HTTP (GET, POST, PUT, DELETE) de forma simples e limpa.
+
+### Instalação:
+
+```bash
+npm install axios
+```
+
+### O que é Axios?
+
+- **Biblioteca HTTP**: Facilita requisições para APIs
+- **Mais simples que fetch()**: Sintaxe mais clara e menos verbosa
+- **Suporte a JSON automático**: Converte dados JSON automaticamente
+- **Melhor tratamento de erros**: Captura erros com mais detalhes
+- **Cancelamento de requisições**: Pode cancelar requisições em andamento
+- **Interceptadores**: Permite interceptar requisições e respostas
+
+### Como usar:
+
+**1. Criar um arquivo de serviço (src/services/api.ts):**
+
+```typescript
+import axios from 'axios'
+
+export const api = axios.create({
+  baseURL: 'https://api.github.com', // URL base
+  timeout: 10000, // Timeout em ms
+})
+```
+
+**2. Usar em um componente (exemplo: GET):**
+
+```typescript
+import { api } from './services/api'
+
+async function buscarUsuario(username: string) {
+  try {
+    const response = await api.get(`/users/${username}`)
+    console.log('Dados do usuário:', response.data)
+  } catch (error) {
+    console.error('Erro:', error.message)
+  }
+}
+```
+
+**3. Outros tipos de requisições:**
+
+```typescript
+// POST - Enviar dados
+const response = await api.post('/endpoint', { nome: 'João' })
+
+// PUT - Atualizar dados
+const response = await api.put('/endpoint/1', { nome: 'Maria' })
+
+// DELETE - Remover dados
+const response = await api.delete('/endpoint/1')
+```
+
+### Vantagens sobre fetch():
+
+| Recurso | Axios | Fetch |
+|---------|-------|-------|
+| Sintaxe | Simples | Verbosa |
+| JSON automático | ✅ Sim | ❌ Precisa `.json()` |
+| Timeout | ✅ Configurável | ❌ Não tem |
+| Erro automático | ✅ Sim | ❌ Precisa verificar status |
+| Cancelar requisição | ✅ Sim | ❌ Complexo |
+
+## 7. Instalando o grafico de contribuicoes do GitHub
 
 Para exibir o calendario de contribuicoes no perfil:
 
@@ -89,34 +159,7 @@ Para exibir o calendario de contribuicoes no perfil:
 npm install react-github-calendar
 ```
 
-## 7. Erro comum no Vite: 504 Outdated Optimize Dep
 
-Se aparecer algo como `Failed to load resource: 504 (Outdated Optimize Dep)`, siga estes passos:
-
-1. Pare o servidor (`Ctrl + C`).
-2. Limpe o cache de otimização do Vite.
-3. Rode o projeto novamente com `--force`.
-
-macOS/Linux:
-
-```bash
-rm -rf node_modules/.vite
-npm run dev -- --force
-```
-
-Windows (Prompt de Comando):
-
-```bat
-rmdir /s /q node_modules\.vite
-npm run dev -- --force
-```
-
-Windows (PowerShell):
-
-```powershell
-Remove-Item -Recurse -Force node_modules/.vite
-npm run dev -- --force
-```
 
 ## 8. Extensão recomendada para VS Code
 

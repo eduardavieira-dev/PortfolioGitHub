@@ -9,6 +9,10 @@ const roseTheme = {
   light: ['#fff8fa', '#ffdde9', '#ff9ec2', '#ff5d99', '#f02779'],
   dark: ['#3a0a22', '#6e1240', '#a31c5e', '#d9257f', '#f35aa2'],
 }
+const greenTheme = {
+  light: ['#f4f4f4', '#c8f2c8', '#90da90', '#5ecb5e', '#36b936'],
+  dark: ['#2a3a2a', '#3a4a3a', '#4a5a4a', '#5a6a5a', '#6a7a6a'],
+}
 
 export function Contribuitions({ username, isLoading = false }: ContribuitionsProps) {
   if (isLoading) {
@@ -31,7 +35,7 @@ export function Contribuitions({ username, isLoading = false }: ContribuitionsPr
         <GitHubCalendar
           username={username}
           colorScheme="light"
-          theme={roseTheme}
+          theme={greenTheme}
           blockSize={10}
           blockMargin={3}
           fontSize={11}

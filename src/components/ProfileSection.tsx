@@ -4,7 +4,7 @@ import { SocialIcons } from './SocialIcons'
 export function ProfileSection() {
   return (
     <div className="flex flex-col gap-1 text-center">
-      <img src="octocat.png" alt="" className="w-40 h-40 mx-auto" />
+      <img src="octocat.png" alt="octocat" className="w-40 h-40 mx-auto" />
       <h4 className="text-lg font-medium">Eduarda Vieira</h4>
       <span className="text-secondary text-xs">@eduardavieira-dev</span>
       <p className=" text-xs">Estudante de Engenharia de Software </p>

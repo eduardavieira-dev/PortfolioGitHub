@@ -9,6 +9,7 @@ import { ProfileInformations } from './components/ProfileInformations'
 import { ProfileSection } from './components/ProfileSection'
 import { TechPill } from './components/TechPill'
 import { MagnifyingGlass } from '@phosphor-icons/react'
+import { api } from './services/api'
 
 interface Repository {
   name: string
@@ -47,15 +48,17 @@ export default function App() {
     setRepositories([])
     setLoading(true)
     try {
+      // Fazendo requisições com axios
       const [userResponse, reposResponse] = await Promise.all([
-        fetch(`https://api.github.com/users/${username}`),
-        fetch(`https://api.github.com/users/${username}/repos`),
+        api.get(`/users/${username}`),
+        api.get(`/users/${username}/repos`),
       ])
 
-      const userData = await userResponse.json()
-      const reposData = await reposResponse.json()
+      const userData = userResponse.data
+      const reposData = reposResponse.data
 
-      if (userResponse.ok && userData.login) {
+      // Verificando se o usuário existe
+      if (userData && userData.login) {
         setUser({
           name: userData.name || userData.login,
           login: userData.login,
@@ -69,7 +72,8 @@ export default function App() {
         setUser(null)
       }
 
-      if (reposResponse.ok && Array.isArray(reposData)) {
+      // Verificando se recebeu array de repositórios
+      if (Array.isArray(reposData)) {
         const mappedRepos: Repository[] = reposData.slice(0, 12).map((repo) => ({
           name: repo.name,
           description: repo.description || '',

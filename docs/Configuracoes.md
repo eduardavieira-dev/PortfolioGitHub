@@ -62,3 +62,28 @@ body {
   border-color: var(--border-card);
 }
 ```
+
+
+## Estrutura completa de pastas e arquivos (src)
+
+```text
+src/
+  App.tsx
+  index.css
+  main.tsx
+
+  components/
+      About.tsx
+      CardRepository.tsx
+      Contribuitions.tsx
+      Footer.tsx
+      Header.tsx
+      InteressPill.tsx
+      ProfileInformations.tsx
+      ProfileSection.tsx
+      SocialIcons.tsx
+      TechPill.tsx
+      
+  services/
+      api.ts
+```
